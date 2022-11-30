@@ -1,0 +1,40 @@
+
+body{
+    margin: 0px;
+    background-color: aliceblue;
+}
+
+.contenedor{
+    margin: 0px 48px;
+    font-family:  "Montserrat",Arial, Helvetica, sans-serif ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+.contenedor-logo{
+    color: darkgray;
+}
+.contenedor-pqrs{
+   
+}
+.contenedor-titulo{
+    display: flex;
+    gap: 16px;
+    margin: 0px 0px 8px 0px;
+}
+.contenedor-titulo h1{
+    margin: 0px;
+}
+
+.contenedor-botones{
+    padding: 24px;
+    margin: 20px 0px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px lightgrey;
+    border: 1px solid rgb(235, 234, 234);
+}
+.form-campo{
+    
+}
