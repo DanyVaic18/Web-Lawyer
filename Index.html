@@ -22,9 +22,12 @@
   </head>
   <body>
     <div class="contenedor">
+      <!-- Logo de la empresa -->
       <div class="contenedor-logo">
         <h1>Logo de los Abogados</h1>
       </div>
+
+      <!-- Inicio -->
       <div class="contenedor-pqrs">
         <div class="titulo">
           <img
@@ -36,7 +39,7 @@
         </div>
         <span
           >Para iniciar el proceso indique a continuación el número de cédula y
-          nombre completo.</span
+          nombre completo</span
         >
         <form class="contenedor-botones">
           <input
@@ -52,11 +55,47 @@
             class="form-campo"
             id="nombresApellidos"
           />
-          <button class="boton-dark" type="submit">
-            Iniciar
-            <span class="material-symbols-outlined"> start </span>
-          </button>
+          <button class="boton-dark" type="submit">Iniciar</button>
         </form>
+        <hr />
+        <!-- Opciones de botones -->
+        <div class="contenedor-opciones">
+          <p>Indique a continuación a que secretaría pertenece la solicitud</p>
+          <div class="contenedor-botones">
+            <button class="boton-dark" type="button">
+              Secretaría de Salud
+            </button>
+            <button class="boton-dark" type="button">Secretaría General</button>
+            <button class="boton-dark" type="button">
+              Secretaría Planeación
+            </button>
+          </div>
+          <p>Indique si es</p>
+          <div class="contenedor-botones">
+            <button class="boton-dark" type="button">Peticón</button>
+            <button class="boton-dark" type="button">Queja</button>
+            <button class="boton-dark" type="button">Reclamo</button>
+            <button class="boton-dark" type="button">Solicitud</button>
+          </div>
+          <p>Indique el tipo de respuesta</p>
+          <div class="contenedor-botones">
+            <button class="boton-dark" type="button">Tipo 1</button>
+            <button class="boton-dark" type="button">Tipo 2</button>
+            <button class="boton-dark" type="button">Tipo 3</button>
+            <button class="boton-dark" type="button">Tipo 4</button>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <!-- Exportar -->
+      <div class="contenedor-botones">
+        <img
+          src="assets/icon/iconmonstr-file-34.svg"
+          alt="logo-pdf"
+          title="icono-pdf"
+          class="icon-lg"
+        />
+        <button class="boton-dark" type="button">Generar pdf</button>
       </div>
     </div>
     <script src="Js/script.js"></script>
