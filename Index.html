@@ -11,16 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <!-- Iconos de Google -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
     <!-- Icono de la pestaña -->
     <link rel="icon" href="assets/Icon/iconmonstr-file-34.svg" />
-
-    <!-- Libreria de Pdf -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <title>Formulario Abogados</title>
   </head>
@@ -30,16 +22,15 @@
       <div class="contenedor-logo">
         <h1>Logo de los Abogados</h1>
       </div>
-
       <!-- Inicio -->
-      <div class="contenedor-pqrs">
+      <div class="contenedor-inicio">
         <div class="titulo">
           <img
             src="assets/icon/iconmonstr-note-11.svg"
             alt="Datos"
             title="Data"
           />
-          <h1>Automatizador de PQRS</h1>
+          <h1>Automatizador de respuesta de tutela</h1>
         </div>
         <span
           >Para iniciar el proceso indique a continuación el número de cédula y
@@ -51,57 +42,67 @@
             placeholder="Número de Cédula"
             class="form-campo"
             id="numeroCedula"
+            name="numeroCedula"
+            required
           />
+
 
           <input
             type="text"
             placeholder="Nombres y apellidos"
             class="form-campo"
             id="nombresApellidos"
+            name="nombresApellidos"
+            required
           />
           <button class="boton-dark" type="submit">Iniciar</button>
         </form>
-        <hr />
-        <!-- Opciones de botones -->
-        <div class="contenedor-opciones">
-          <p>Indique a continuación a que secretaría pertenece la solicitud</p>
-          <div class="contenedor-botones">
-            <button class="boton-dark" type="button">
-              Secretaría de Salud
-            </button>
-            <button class="boton-dark" type="button">Secretaría General</button>
-            <button class="boton-dark" type="button">
-              Secretaría Planeación
-            </button>
-          </div>
-          <p>Indique si es</p>
-          <div class="contenedor-botones">
-            <button class="boton-dark" type="button">Peticón</button>
-            <button class="boton-dark" type="button">Queja</button>
-            <button class="boton-dark" type="button">Reclamo</button>
-            <button class="boton-dark" type="button">Solicitud</button>
-          </div>
-          <p>Indique el tipo de respuesta</p>
-          <div class="contenedor-botones">
-            <button class="boton-dark" type="button">Tipo 1</button>
-            <button class="boton-dark" type="button">Tipo 2</button>
-            <button class="boton-dark" type="button">Tipo 3</button>
-            <button class="boton-dark" type="button">Tipo 4</button>
-          </div>
+      </div>
+
+      <!-- Opciones de botones -->
+
+      <div class="contenedor-opciones ">
+        <p>Indique los hechos que lo sustentan</p>
+        <div class="contenedor-botones">
+          <button class="boton-dark" type="button">Hecho 1</button>
+          <button class="boton-dark" type="button">Hecho 2</button>
+          <button class="boton-dark" type="button">Hecho 3</button>
+          <button class="boton-dark" type="button">Hecho 4</button>
         </div>
-        <hr>
+        <p>Indique el tipo de respuesta</p>
+        <div class="contenedor-botones">
+          <button class="boton-dark" type="button">Tipo 1</button>
+          <button class="boton-dark" type="button">Tipo 2</button>
+          <button class="boton-dark" type="button">Tipo 3</button>
+          <button class="boton-dark" type="button">Tipo 4</button>
+        </div>
+          <span id="volver">Volver</span>
       </div>
+
       <!-- Exportar -->
-      <div class="contenedor-botones">
-        <img
-          src="assets/icon/iconmonstr-file-34.svg"
-          alt="logo-pdf"
-          title="icono-pdf"
-          class="icon-lg"
-        />
-        <button class="boton-dark" type="button">Generar pdf</button>
+      <div class="contenedor-exportar">
+        <div class="contenedor-botones">
+          <img
+            src="assets/icon/iconmonstr-file-34.svg"
+            alt="logo-pdf"
+            title="icono-pdf"
+            class="icon-lg"
+          />
+          <button class="boton-dark" type="button" id="generarPdf">
+            Generar pdf
+          </button>
+        </div>
       </div>
+
+      <div class="previsualizador"></div>
     </div>
-    <script src="Js/script.js"></script>
+    <script src="js/main.js" type="module"></script>
+    <!-- JSPDF -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+      integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

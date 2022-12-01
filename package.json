@@ -8,7 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "jspdf": "^2.5.1"
+  "dependencies": { },
+  "devDependencies": {
+    "@types/jspdf": "^2.0.0"
   }
 }
