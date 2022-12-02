@@ -26,6 +26,12 @@ listHechosEle?.forEach((ele, i) => {
   ele.addEventListener("click", (ev) => {
     ev.preventDefault();
     datos.hechos = ev.target.value;
+    const parrafoEle = document.createElement("p")
+    const subTitulo = document.createElement("h3")
+    subTitulo.innerHTML =`Hechos`
+    previsualizador.appendChild(subTitulo)
+    parrafoEle.innerHTML = `Presento la carta por ${datos.hechos} la información suministrada en el día de hoy`
+    previsualizador.appendChild(parrafoEle)
   });
 });
 listTiposEle?.forEach((ele, i) => {
@@ -35,12 +41,22 @@ listTiposEle?.forEach((ele, i) => {
     datos.tipo = ev.target.value;
     if(datos.hechos.trim() !== ""){
         setPasoApaso(ev, "none", "none", "flex");
+        const parrafoEle = document.createElement("p")
+        const subTitulo = document.createElement("h3")
+        subTitulo.innerHTML =`Tipo u Objeto`
+        previsualizador.appendChild(subTitulo)
+        parrafoEle.innerHTML = `Presento el tipo de denucia como ${datos.tipo} lo cual es no es conveniente`
+        previsualizador.appendChild(parrafoEle)
     }else{
         errorFaltaDato("contenedor-hechos")
     }
   });
 });
 
+/**
+ * @param {byID} byID Es el nombre del id del elemento
+ * @returns {void}
+ */
 function errorFaltaDato (byID) {
     let restablecer = 1;
     document.getElementById(byID).style.border = "1px solid #F54A4A";
@@ -52,7 +68,6 @@ function errorFaltaDato (byID) {
       }
     }, 2000);
 }
-
 
 /**
  * @param {ev} ev De donde se activo el evento, event
@@ -70,6 +85,9 @@ function formCampos(ev) {
     datos.nombresApellidos.trim() !== ""
   ) {
     setPasoApaso(ev, "none", "block", "none");
+    const parrafoEle = document.createElement("p")
+    parrafoEle.innerHTML = `${datos.nombresApellidos} por propio derecho con número de identificación ${datos.numCedula} me dirigio a usted respetuosamente me presento y  digo:`
+    previsualizador.appendChild(parrafoEle)
   } else {
     errorFaltaDato("numeroCedula")
   }
@@ -105,3 +123,8 @@ exportarBoton.addEventListener("click", (ev) => {
   doc.text("Hello world!", 10, 10);
   doc.save("a4.pdf");
 });
+
+
+const previsualizador = document.getElementById("previsualizar")
+const parrafoEle = document.createElement("p")
+

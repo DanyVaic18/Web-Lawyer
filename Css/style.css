@@ -120,11 +120,22 @@ body {
 .icon-lg {
     width: 30px;
 }
-
+.content-previsualizar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.previsualizador{
+    padding: 20px;
+    margin: 10px;
+    min-width: 300px;
+    border: 1px solid rgb(235, 234, 234);
+    border-radius: 10px;
+    background-color: white;
+    flex: 0 1 700px;
+}
 
 /* Animación de aparecer */
-
-
 .showUp{
     animation: showup;
     animation-duration: 1s;
