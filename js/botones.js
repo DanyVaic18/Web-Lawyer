@@ -113,12 +113,15 @@ restablecer.addEventListener("click", (ev)=>{
  * @returns {void}
  */
 function globalBotones() {
+    contenedorHechos.innerHTML = ""
+    contenedorTipos.innerHTML = ""
   arrBtnHechos.forEach((hecho, index) => {
     contenedorHechos.innerHTML += `
     <button class="boton-dark" type="button" id=${hecho._id}> ${hecho.numHecho}</button>
     `;
   });
   arrBtnTipos.forEach((tipo, index) => {
+
     contenedorTipos.innerHTML += `
     <button class="boton-dark" type="button" id=${tipo._id}> ${tipo.numTipo}</button>
     `;
