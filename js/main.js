@@ -2,16 +2,19 @@ import {} from './inicio.js'
 import {} from './botones.js'
 import {} from './exportarPdf.js'
 import {} from './volver.js'
-
 const contenedorInicio = document.getElementsByClassName("contenedor-inicio");
 const contenedorOpciones = document.getElementsByClassName("contenedor-opciones");
 const contenedorExportar = document.getElementsByClassName("contenedor-exportar");
+const fechaActual = document.getElementById("fecha")
+
+const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
 
 const datos = {
   numCedula: "",
   nombresApellidos: "",
   hechos: "",
   tipo: "",
+  fecha:`${meses[new Date().getMonth()]} ${new Date().getDate()} de ${new Date().getFullYear()}`,
 };
 
 /**
@@ -43,6 +46,8 @@ function setPasoApaso(ev, inicio, opciones, exportar) {
   contenedorOpciones[0].style.display = opciones;
   contenedorExportar[0].style.display = exportar;
 }
+
+fechaActual.innerHTML += ` ${datos.fecha}`
 
 export {
   setPasoApaso,

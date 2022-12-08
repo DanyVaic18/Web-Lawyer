@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Estilos css -->
-    <link rel="stylesheet" href="Css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Fuente de letra -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
+    />
+    <!-- Iconos de Google -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
     <!-- Icono de la pestaña -->
     <link rel="icon" href="assets/Icon/iconmonstr-file-34.svg" />
@@ -62,20 +67,11 @@
 
       <div class="contenedor-opciones showUp">
         <p>Indique los hechos que lo sustentan</p>
-        <div class="contenedor-botones" id="contenedor-hechos">
-          <button class="boton-dark hechos" type="button">Hecho 1</button>
-          <button class="boton-dark hechos" type="button">Hecho 2</button>
-          <button class="boton-dark hechos" type="button">Hecho 3</button>
-          <button class="boton-dark hechos" type="button">Hecho 4</button>
-        </div>
+        <div class="contenedor-botones" id="contenedor-hechos"></div>
         <p>Indique el tipo de respuesta</p>
-        <div class="contenedor-botones">
-          <button class="boton-dark tipos" type="button">Tipo 1</button>
-          <button class="boton-dark tipos" type="button">Tipo 2</button>
-          <button class="boton-dark tipos" type="button">Tipo 3</button>
-          <button class="boton-dark tipos" type="button">Tipo 4</button>
-        </div>
+        <div class="contenedor-botones" id="contenedor-tipos"></div>
         <span class="volver">Volver</span>
+        <span class="material-symbols-outlined"> settings_backup_restore </span>
       </div>
 
       <!-- Exportar -->
@@ -85,7 +81,7 @@
             src="assets/icon/iconmonstr-file-34.svg"
             alt="logo-pdf"
             title="icono-pdf"
-            class="icon-lg"
+            class="icon-sm"
           />
           <button class="boton-dark" type="button" id="generarPdf">
             Generar pdf
@@ -93,10 +89,33 @@
         </div>
         <span class="volver">Volver</span>
       </div>
-      <h2>Previsualizador</h2>
       <div class="content-previsualizar">
         <div class="previsualizador" id="previsualizar">
-            <p>Sr, Agente fiscal</p>
+          <div class="prev-cabecera">
+            <img
+              src="assets/image/escudocol.png"
+              alt="escudo de colombia"
+              class="icon-xl"
+            />
+            <div>
+              <h3>República de Colombia</h3>
+              <h3>Departamento de Norte de Santander</h3>
+              <h3>Entidad Fiscal de la Alcaldía Municipal de Cúcuta</h4>
+            </div>
+          </div>
+          <div class="prev-contenido">
+            <p id="fecha">Cúcuta,</p>
+            <br>
+            <p>Señor:</p>
+            <h4>JUEZ CIVIL MUNICIPAL DE CÚCUTA-NSA</h4>
+            <p>Cúcuta.</p>
+          </div>
+          <div class="prev-contenido">
+            <p><b>REFERENCIA:</b> Solicitud de respuesta de tutela.</p>
+            <p><b>ACCIONANTE:</b> Nombre del Abogado.</p>
+            <p><b>ACCIONADO:</b> <span id="civil"></span></p>
+          </div>
+          <div class="prev-contenido" id="seDirige"></div>
         </div>
       </div>
     </div>

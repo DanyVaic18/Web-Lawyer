@@ -1,3 +1,13 @@
+/*  Iconos de Google */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
 :root {
     --bg-princpal: #f8f9fa;
     --bg-boton: #343a40;
@@ -9,8 +19,8 @@ body {
 }
 
 .contenedor {
-    margin: 0px 20px;
-    padding: 16px 16px;
+    margin: 0px 10px;
+    padding: 16px;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
@@ -86,7 +96,6 @@ body {
     justify-content: center;
     cursor: pointer;
     outline: none;
-
 }
 
 .boton-dark:hover {
@@ -117,23 +126,55 @@ body {
     cursor: pointer;
 }
 
-.icon-lg {
+.icon-sm {
     width: 30px;
+}
+.icon-lg{
+    width: 50px;
+}
+.icon-xl{
+    min-width: 100px;
+    max-height: 100px;
 }
 .content-previsualizar{
     display: flex;
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .previsualizador{
     padding: 20px;
-    margin: 10px;
-    min-width: 300px;
+    min-width: none;
     border: 1px solid rgb(235, 234, 234);
     border-radius: 10px;
     background-color: white;
-    flex: 0 1 700px;
+    flex: 0 1 720px;
+    min-width: 600px;
+    box-sizing: border-box;
 }
+.prev-cabecera{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 16px 0px 32px;
+}
+.prev-cabecera img{
+    align-self: center;
+}
+.prev-cabecera div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+}
+.prev-cabecera h3, h4, p {
+    margin: 6px 0px;
+}
+.prev-contenido{
+    margin: 30px 0px;
+}
+
+
 
 /* Animación de aparecer */
 .showUp{
