@@ -12,8 +12,14 @@ const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"
 const datos = {
   numCedula: "",
   nombresApellidos: "",
-  hechos: "",
-  tipo: "",
+  hechos: {
+    listHechos:[],
+    contenido:""
+  },
+  tipo: {
+    listTipos:[],
+    contenido:""
+  },
   fecha:`${meses[new Date().getMonth()]} ${new Date().getDate()} de ${new Date().getFullYear()}`,
 };
 

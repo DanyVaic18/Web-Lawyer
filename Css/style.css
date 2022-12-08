@@ -4,7 +4,7 @@
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
-  'opsz' 48
+  'opsz' 24;
 }
 
 
@@ -124,6 +124,23 @@ body {
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    min-width: 120px;
+    text-align: center;
+}
+.contenedor-configuracion{
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+#restablecer-hecho-tipo{
+    flex: 0 1 auto;
+}
+#siguiente{
+    flex: 0 1 auto;
 }
 
 .icon-sm {
@@ -172,6 +189,7 @@ body {
 }
 .prev-contenido{
     margin: 30px 0px;
+    padding: 0px 12px;
 }
 
 
