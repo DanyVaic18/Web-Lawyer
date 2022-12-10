@@ -114,7 +114,9 @@ restablecer.addEventListener("click", (ev)=>{
  */
 function globalBotones() {
     contenedorHechos.innerHTML = ""
-    contenedorTipos.innerHTML = ""
+    contenedorTipos
+    
+    .innerHTML = ""
   arrBtnHechos.forEach((hecho, index) => {
     contenedorHechos.innerHTML += `
     <button class="boton-dark" type="button" id=${hecho._id}> ${hecho.numHecho}</button>
@@ -156,7 +158,7 @@ function aggTipoHechoPrev(ev,btn,i) {
       datos.hechos.contenido = arrBtnHechos[i].contenido
       datos.hechos.listHechos.push(arrBtnHechos[i])
       prevHechos.innerHTML += ` 
-      <h3 style="text-align:center;">Hecho ${i+1}.</h3> 
+      <h3 style="text-align:center;">Hecho.</h3> 
       <p>${datos.hechos.contenido}</p>
       `
       arrBtnHechos[i].agregado = true

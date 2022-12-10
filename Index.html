@@ -37,10 +37,10 @@
           />
           <h1>Automatizador de respuesta de tutela</h1>
         </div>
-        <span
-          >Para iniciar el proceso indique a continuación el número de cédula y
-          nombre completo</span
-        >
+        <span>
+          Para iniciar el proceso indique a continuación el número de cédula y
+          nombre completo
+        </span>
         <form class="contenedor-botones">
           <input
             type="text"
@@ -50,7 +50,6 @@
             name="numeroCedula"
             required
           />
-
           <input
             type="text"
             placeholder="Nombres y apellidos"
@@ -64,7 +63,6 @@
       </div>
 
       <!-- Opciones de botones -->
-
       <div class="contenedor-opciones showUp">
         <p>Indique los hechos que lo sustentan</p>
         <div class="contenedor-botones" id="contenedor-hechos"></div>
@@ -75,13 +73,21 @@
           <button class="boton-dark" type="button" id="restablecer-hecho-tipo">
             Restablecer
           </button>
-          <span class="boton-dark" id="siguiente">siguiente</span>
+          <span class="boton-dark" id="siguiente">Siguiente</span>
         </div>
       </div>
 
       <!-- Exportar -->
       <div class="contenedor-exportar">
         <div class="contenedor-botones">
+          <input
+            type="text"
+            placeholder="Nombre del PDF"
+            class="form-campo"
+            id="namePdf"
+            name="namePdf"
+            required
+          />
           <img
             src="assets/icon/iconmonstr-file-34.svg"
             alt="logo-pdf"
@@ -94,6 +100,8 @@
         </div>
         <span class="volver">Volver</span>
       </div>
+
+      <!-- Previsualizar -->
       <div class="content-previsualizar">
         <div class="previsualizador" id="previsualizar">
           <div class="prev-cabecera">
@@ -105,12 +113,12 @@
             <div>
               <h3>República de Colombia</h3>
               <h3>Departamento de Norte de Santander</h3>
-              <h3>Entidad Fiscal de la Alcaldía Municipal de Cúcuta</h4>
+              <h3>Entidad Fiscal de la Alcaldía Municipal de Cúcuta</h3>
             </div>
           </div>
           <div class="prev-contenido">
             <p id="fecha">Cúcuta,</p>
-            <br>
+            <br />
             <p>Señor:</p>
             <h4>JUEZ CIVIL MUNICIPAL DE CÚCUTA-NSA</h4>
             <p>Cúcuta.</p>
@@ -122,19 +130,20 @@
           </div>
           <div class="prev-contenido" id="seDirige"></div>
           <div class="prev-contenido" id="respuesta-hecho"></div>
-          <div class="prev-contenido" id="respuesta-tipo"> 
-            <h3 style="display: none;" id="anexos">Anexos</h3>
+          <div class="prev-contenido" id="respuesta-tipo">
+            <h3 style="display: none" id="anexos">Anexos</h3>
           </div>
-          <div class="prev-contenido" id="export-final" style="display: none;"> 
-          
-            
-          </div>
+          <div
+            class="prev-contenido"
+            id="export-final"
+            style="display: none"
+          ></div>
         </div>
       </div>
     </div>
     <script src="js/main.js" type="module"></script>
-    <!-- JSPDF -->
 
+    <!-- JSPDF -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
       integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
