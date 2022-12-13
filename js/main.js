@@ -20,7 +20,7 @@ const datos = {
     listTipos:[],
     contenido:""
   },
-  fecha:`${meses[new Date().getMonth()]} ${new Date().getDate()} de ${new Date().getFullYear()}`,
+  fecha:`Cúcuta, ${meses[new Date().getMonth()]} ${new Date().getDate()} de ${new Date().getFullYear()}`,
 };
 
 /**
