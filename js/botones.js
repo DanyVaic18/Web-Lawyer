@@ -71,9 +71,13 @@ const arrBtnTipos = [
 
 siguiente.addEventListener("click", (ev) => {
   ev.preventDefault();
-  if (datos.hechos.contenido === "" && datos.tipo.contenido === "") {
-    errorFaltaDato("contenedor-hechos");
-    errorFaltaDato("contenedor-tipos");
+  if (
+    datos.hechos.contenido.length === 0 ||
+    datos.tipo.contenido.length === 0
+  ) {
+    datos.hechos.contenido === ""
+      ? errorFaltaDato("contenedor-hechos")
+      : errorFaltaDato("contenedor-tipos");
   } else {
     exportFinal.style.display = "block";
     exportFinal.innerHTML = `
@@ -171,8 +175,8 @@ function aggTipoHechoPrev(ev, btn, i) {
       errorFaltaDato("contenedor-hechos");
     } else {
       if (!arrBtnTipos[i].agregado) {
-        datos.tipo.contenido = arrBtnHechos[i].contenido;
-        datos.tipo.listTipos.push(arrBtnHechos[i]);
+        datos.tipo.contenido = arrBtnTipos[i].contenido;
+        datos.tipo.listTipos.push(arrBtnTipos[i]);
         let anexos = document.getElementById("anexos");
         anexos.style.display = "block";
         anexos.style.textAlign = "center";

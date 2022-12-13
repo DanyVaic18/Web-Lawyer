@@ -1,42 +1,61 @@
-import {} from './inicio.js'
-import {} from './botones.js'
-import {} from './exportarPdf.js'
-import {} from './volver.js'
+import {} from "./inicio.js";
+import {} from "./botones.js";
+import {} from "./exportarPdf.js";
+import {} from "./volver.js";
 const contenedorInicio = document.getElementsByClassName("contenedor-inicio");
-const contenedorOpciones = document.getElementsByClassName("contenedor-opciones");
-const contenedorExportar = document.getElementsByClassName("contenedor-exportar");
-const fechaActual = document.getElementById("fecha")
+const contenedorOpciones = document.getElementsByClassName(
+  "contenedor-opciones"
+);
+const contenedorExportar = document.getElementsByClassName(
+  "contenedor-exportar"
+);
+const fechaActual = document.getElementById("fecha");
 
-const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
+const meses = [
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre",
+];
 
 const datos = {
   numCedula: "",
   nombresApellidos: "",
   hechos: {
-    listHechos:[],
-    contenido:""
+    listHechos: [],
+    contenido: "",
   },
   tipo: {
-    listTipos:[],
-    contenido:""
+    listTipos: [],
+    contenido: "",
   },
-  fecha:`Cúcuta, ${meses[new Date().getMonth()]} ${new Date().getDate()} de ${new Date().getFullYear()}`,
+  fecha: `Cúcuta, ${
+    meses[new Date().getMonth()]
+  } ${new Date().getDate()} de ${new Date().getFullYear()}`,
 };
 
 /**
  * @param {byID} byID Es el nombre del id del elemento
  * @returns {void}
  */
-function errorFaltaDato (byID) {
-    let restablecer = 1;
-    document.getElementById(byID).style.border = "1px solid #F54A4A";
-    const aviso = setInterval(() => {
-      restablecer--;
-      if (restablecer === 0) {
-        document.getElementById(byID).style.border = "";
-        clearInterval(aviso);
-      }
-    }, 2000);
+function errorFaltaDato(byID) {
+  let restablecer = 1;
+  document.getElementById(byID).style.border = "1px solid #F54A4A";
+  const aviso = setInterval(() => {
+    restablecer--;
+    if (restablecer === 0) {
+      document.getElementById(byID).style.border = "";
+      clearInterval(aviso);
+    }
+  }, 2000);
 }
 
 /**
@@ -53,10 +72,6 @@ function setPasoApaso(ev, inicio, opciones, exportar) {
   contenedorExportar[0].style.display = exportar;
 }
 
-fechaActual.innerHTML += ` ${datos.fecha}`
+fechaActual.innerHTML += ` ${datos.fecha}`;
 
-export {
-  setPasoApaso,
-  datos,
-  errorFaltaDato,
-}
+export { setPasoApaso, datos, errorFaltaDato };
