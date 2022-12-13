@@ -69,7 +69,7 @@ function generarPDF(ev) {
             .setFont("helvetica", "normal")
             .text("Hecho", 109, y, null, null, "center");
           y = y + mm10;
-          let hechoText = doc.splitTextToSize(hecho.contenido, 220);
+          let hechoText = doc.splitTextToSize(hecho.contenido, 210);
           doc
             .setFontSize(12)
             .setFont("helvetica", "normal")
@@ -81,7 +81,7 @@ function generarPDF(ev) {
             .setFont("helvetica", "normal")
             .text("Hecho", 109, y, null, null, "center");
           y = y + mm10;
-          let hechoText = doc.splitTextToSize(hecho.contenido, 220);
+          let hechoText = doc.splitTextToSize(hecho.contenido, 210);
           doc
             .setFontSize(12)
             .setFont("helvetica", "normal")
@@ -99,9 +99,10 @@ function generarPDF(ev) {
           .text("Anexos", 110, y, null, null, "center");
         y = y + mm10;
         arrHechosTipos.forEach((tipo, index) => {
+          let texto = `${index + 1}. ` + tipo.contenido
           let tipoText = doc.splitTextToSize(
-            `${index + 1}. ` + tipo.contenido,
-            160
+            texto,
+            index? 155:215
           );
           doc
             .setFontSize(12)
@@ -116,10 +117,8 @@ function generarPDF(ev) {
           .text("Anexos", 110, y, null, null, "center");
         y = y + mm10;
         arrHechosTipos.forEach((tipo, index) => {
-          let tipoText = doc.splitTextToSize(
-            `${index + 1}. ` + tipo.contenido,
-            160
-          );
+          let texto = `${index + 1}. ` + tipo.contenido
+          let tipoText = doc.splitTextToSize(texto, index? 155:215);
           doc
             .setFontSize(12)
             .setFont("helvetica", "normal")
@@ -168,7 +167,7 @@ function generarPDF(ev) {
     .text(`${datos.nombresApellidos}.`, x + 28, y);
   y = y + mm10;
   // Respetuosamente el Abogado se dirige al Accionado:
-  let se_Dirige = doc.splitTextToSize(seDirige.innerText, 165);
+  let se_Dirige = doc.splitTextToSize(seDirige.innerText, 160);
   doc
     .setLineHeightFactor()
     .setFont("helvetica", "normal")
@@ -227,11 +226,10 @@ function generarPDF(ev) {
       .setFont("helvetica", "normal")
       .text("_________________________________", x, y);
     y = y + mm6;
-    doc.setFont("helvetica", "normal").text("Firma", x + 25, y);
+    doc.setFont("helvetica", "normal").text("Firma", x + 35, y);
     y = y + mm10;
   }
 }
-
 exportarBoton.addEventListener("click", (ev) => {
   ev.preventDefault();
 
